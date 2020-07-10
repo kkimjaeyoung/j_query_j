@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+
+
+
+	.login {
+		width:80%;
+		background:#fff;
+		margin: 30px auto;
+		border:1px solid #e5e5e5;
+		-moz-box-shadow: rgba(200,200,200,.7) 0 4px 10px -1px;
+		-webkit-box-shadow: rgba(200,200,200,.7) 0 4px 10px -1px;
+		box-shadow: rgba(200,200,200,.7) 0 4px 10px -1px;
+	}
+	.login h1 a {
+		background-image:url(images/logo.png);
+		background-repeat:no-repeat;
+		background-position:center top;
+		background-size:189px 47px;
+		height:47px;
+		margin:0 auto 25px;
+		padding:0;
+		width:189px;
+		text-indent:-9999px;
+		overflow:hidden;
+		display:block;
+	}
+	.login h1 a { width:100%;}
+	.login form {
+		margin:0px auto;
+		border:none;
+		margin-top:30px;
+		padding:20px;
+	}
+
+</style>
+<body>
+
+
+	<div data-role="page" id="page1" data-title="title1">
+
+		<div data-role="header">
+		<h1>의류 매장 best</h1>
+
+
+
+			<ul data-role="button" data-inset="true" class= "ui-btn-right">
+			<a href="#page2"><input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default" value="로그인">
+			</a>
+
+			</ul>
+		</div>
+
+
+			<div data-role="tabs">
+				<div data-role="navbar">
+						<ul>
+							<li><a href="#tab1 ">무신사	</p>	<img src = "musinsa.jpeg" width = "150"  heigt = "75"></a></li>
+							<li><a href="#tab2">아디다스</p><img src = "adidas.png" width = "150"  heigt = "75"></a></li>
+							<li><a href="#tab3">뉴발란스</p><img src = "new.png" width = "150"  heigt = "75"></a></li>
+
+						</ul>
+				</div>
+				<div id="tab1">
+					<div data-role = "listview">
+
+						<li><a href = "#page3" > BEST RANK</a></li>
+
+
+				</div>
+			</div>
+				<div id="tab2" >
+					<div data-role = "listview">
+					<li><a href = "#page5" > BEST RANK</a></li>
+
+
+				</div></div>
+				<div id="tab3" >
+					<div data-role = "listview">
+					<li><a href = "#page7" > BEST RANK</a></li>
+
+
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+	<h1>1705013 김재영<h1>
+		</div>
+
+
+	</div>
+
+	<div data-role="page" id="page2" data-title="두번째 페이지">
+
+
+		    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+		  </head>
+		  <body>
+
+			<div class="login">
+				<h1>
+					<a tabindex="-1" title="" href="http://naver.com">로그인</a>
+				</h1>
+				<form role="form" class="form-inline" name="loginform" id="loginform" action="wp-login.php" method="post">
+					<div class="form-group">
+						<label for="user_login">사용자명</label>
+						<input type="text" name="log" id="user_login" class="form-control" placeholder="사용자명">
+					</div>
+					<div class="form-group">
+						<label for="user_pass">비밀번호</label>
+						<input type="password" name="pwd" id="user_pass" class="form-control" placeholder="비밀번호">
+					</div>
+
+					<ul data-role="button" data-inset="true">
+					<a href="#page1"><input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default" value="로그인">
+
+					</a>
+
+					</ul>
+				</form>
+			</div>
+
+</div>
+
+	<div data-role="page" id="page3" data-title="무신사 랭크">
+
+		<div data-role="header">
+		<h1>의류 매장 best</h1>
+
+
+
+			<ul data-role="button" data-inset="true" class= "ui-btn-right">
+			<a href="#page2"><input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default" value="로그인">
+			</a>
+			<a href="#page1"><input type="submit" name="wp-submit" id="wp-submit" class="UI-BTN-RIGHT" value="처음 페이지로">
+			</a>
+
+
+			</ul>
+		</div>
+		<div data-role = "content">
+		<li><a href = "#" ><img src = "우포스.png" width = "110"  heigt = "100">우포스</a>
+		<a href="#panel1" data-role="button" data-inline="true">자세히 보기</a>
+
+</li>
+		<li><a href = "#" ><img src = "THIS.png" width = "110"  heigt = "100">디스이즈네버뎃</a>
+		<a href="#panel2" data-role="button" data-inline="true">자세히 보기</a>
+
+</li>
+<li><a href = "#" ><img src = "MOD.JPG" width = "110"  heigt = "100">모드청바지</a>
+<a href="#panel3" data-role="button" data-inline="true">자세히 보기</a>
+
+</li>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<div data-role="panel" id="panel1" data-display="overlay" data-position = "left" >
+		<img src = "우포스.png" width = "100"  heigt = "600" align="DEFAULT">
+		<p>Product Info제품정보</p>
+<p>-브랜드 / 품번 OOFOS / 1100 블랙</p>
+<p>- 시즌도움말 보기 / 성별 2019 ALL / 남 여</p>
+<p>-조회수(1개월) 8.3만 회 이상</p>
+<p>-누적판매(1년) 2.1천 개 이상(결제완료-반품)</p>
+<p>-좋아요  857</p></p>
+<p>-구매 후기  394건↓ / 95.04% 만족</p>
+<p>#블랙</p>
+ <p STYLE="BORDER-BOTTOM:SOLID">25~34세, 남성이 많이 구매했습니다.</p>
+<p>Delivery Info배송정보</p>
+<p>-배송 방법 국내 배송 / 입점사 배송</p>
+<p STYLE="BORDER-BOTTOM:SOLID">- 출고 기간도움말 보기 평균 0.5일 / 주말, 공휴일 제외</p>
+<p>Price Info가격정보</p>
+<p>-무신사 판매가 55,000 원</p>
+<p>-무신사 회원가 50,325 ~ 54,175 원 ▼</p>
+
+<a href="#page1"><input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default" value="돌아가기">
+
+</a>
+	</div>
+		<div data-role="panel" id="panel2" data-display="overlay" data-position = "left">
+<img src = "THIS.png" width = "100"  heigt = "600" align="left">
+<P>Product Info제품정보</P>
+<P>-브랜드 / 품번 THISISNEVERTHAT / TN20S0137</P>
+<P>- 시즌도움말 보기 / 성별 2020 S/S / 남</P>
+<P>-조회수(1개월) 14.9만 회 이상</P>
+<P>-누적판매(1년) 1.2만 개 이상(결제완료-반품)</P>
+<P>-좋아요  11,161</P>
+<P>-구매 후기 도움말 보기  3,111건↓ / 96.08% 만족</P>
+<P>#로고#디스이즈네버댓#반팔티셔츠</P>
+<P STYLE="BORDER-BOTTOM:SOLID"> 19~24세, 남성이 많이 구매했습니다. </P>
+<P >Delivery Info배송정보</P>
+<P>-배송 방법 국내 배송 / 입점사 배송 / CJ대한통운</P>
+<P STYLE="BORDER-BOTTOM:SOLID">- 출고 기간도움말 보기 평균 0.3일 / 주말, 공휴일 제외</P>
+<P>Price Info가격정보</P>
+<P>-무신사 판매가 39,000 원</P>
+<P>-무신사 세일가 27,300 원  30% (-11,700원) 할인</P>
+<P>-무신사 회원가 27,300 ~ 27,300 원 ▼</P>
+</DIV>
+		<div data-role="panel" id="panel3" data-display="overlay" data-position = "left">
+<img src = "MOD.JPG" width = "100"  heigt = "600" align="DEFAULT">
+<P>-조회수(1개월) 6.1만 회 이상</P>
+<P>-좋아요  12,295</P>
+<P>-구매 후기  9,296건↓ / 94.58% 만족</P>
+<P STYLE="BORDER-BOTTOM:SOLID">#청바지 #데님 #modnine #펑크타운 #크롭 #워싱진 #중청</P>
+<P >Delivery Info배송정보</P>
+<P>-배송 방법 국내 배송 / 입점사 배송 / CJ대한통운</P>
+<P STYLE="BORDER-BOTTOM:SOLID">- 출고 기간도움말 보기 평균 0.6일 / 주말, 공휴일 제외</P>
+<P >Price Info가격정보</P>
+<P>-무신사 판매가 98,000 원</P>
+<P>-무신사 세일가 68,600 원  30% (-29,400원) 할인</P>
+<P>-무신사 회원가 68,600 ~ 68,600 원 ▼</P>
+<a href="#page1"><input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default" value="돌아가기">
+
+</a>
+</div>
+</DIV>
+<div data-role="page" id="page5" data-title="아디다스 랭크">
+
+			<div data-role="header">
+			<h1>아디다스 best</h1>
+
+
+
+				<ul data-role="button" data-inset="true" class= "ui-btn-right">
+				<a href="#page2"><input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default" value="로그인">
+				</a>
+				<a href="#page1"><input type="submit" name="wp-submit" id="wp-submit" class="UI-BTN-RIGHT" value="처음 페이지로">
+				</a>
+
+				</ul>
+			</div>
+			<div data-role = "content">
+			<li><a href = "#" ><img src = "nike_JO.JPG" width = "110"  heigt = "100">아디다스 조거</a>
+			<a href="#panel4" data-role="button" data-inline="true">자세히 보기</a>
+
+	</li>
+			<li><a href = "#" ><img src = "ULTRA.JPG" width = "110"  heigt = "100"> 울트라부스트</a>
+			<a href="#panel5" data-role="button" data-inline="true">자세히 보기</a>
+
+	</li>
+	<li><a href = "#" ><img src = "TENCU.JPG" width = "110"  heigt = "100"></a>
+	<a href="#panel6" data-role="button" data-inline="true"> 아디다스 텐큐브</a>
+
+	</li>
+		</div>
+
+
+
+
+
+
+
+
+
+			<div data-role="panel" id="panel4" data-display="overlay" data-position = "left" >
+				<img src = "nike_JO.JPG" width = "100"  heigt = "600" align="DEFAULT">
+				<p>Product Info제품정보</p>
+				<P>제품코드	FV3586	컬러	WHITE</P>
+<P>용도	라이프스타일</P>
+<P>소재	겉감: 100% 폴리에스터 / 안감: 100% 나일론 / 밑창: 특수배합 합성고무</P>
+<P>원산지	베트남 	제조년월	2019-09 </P>
+<P>제조자/수입자	adidasAG/ 아디다스코리아(유)</P>
+<P>안전확인 신고 확인증 번호	</P>
+<P>안전품질표시	image</P>
+<P>(83,400원 )SALE 139,000원
+
+
+		<a href="#page1"><input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default" value="돌아가기">
+
+		</a>
+			</div>
+
+				<div data-role="panel" id="panel5" data-display="overlay" data-position = "left">
+					<img src = "ULTRA.JPG" width = "100"  heigt = "600" align="DEFAULT">
+
+				<P>장거리 스트리트 러닝을 위해 탄생한 리스폰시브 슈즈</P>
+				<P>레귤러 핏</P>
+				<P> 아디다스 프라임니트 직물 갑피</P>
+				<P> 유연한 스트레치웹(Stretchweb) 아웃솔; 젖은 표면과 마른 표면에서 우수한 접지력을 발휘하는 컨티넨탈 러버(Continental™ Rubber) 아웃솔; 미드풋 케이지</P>
+				<P> 놀라운 반발력의 부스트(Boost) 미드솔; 안정감을 제공하는 토션 시스템(Torsion System)</P>
+				<P> 경량의 어댑티브 구조</P>
+				<P> 중량: 310 g (사이즈 270mm)</P>
+				<P> 미드솔 굽높이: 10 mm (뒤꿈치: 29 mm, 앞발: 19 mm)</P>
+				<P> 아치 타입: 보통; 자연스럽고 편안한 핏의 핏카운터(Fitcounter) 힐</P>
+
+
+
+		</DIV>
+				<div data-role="panel" id="panel6" data-display="overlay" data-position = "left">
+		<img src = "TENCU.JPG" width = "100"  heigt = "600" align="DEFAULT">
+	<P>101,000원</P>
+		<P> 2000년대 패션에서 영감을 얻은 러닝화 스타일</P>
+<P> 엔지니어드 메쉬 갑피</P>
+<P> 쾌적한 착용감</P>
+<P> 러닝화의 영감을 담아낸 유연한 슈즈</P>
+<P> 오쏘라이트(OrthoLite®) 삭라이너, 바운스 미드솔 쿠셔닝</P>
+
+
+
+		<a href="#page1"><input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default" value="돌아가기">
+
+		</a>
+		</div>
+		</DIV>
+		<div data-role="page" id="page7" data-title="뉴발란스 랭크">
+
+					<div data-role="header">
+					<h1>뉴발란스 best</h1>
+
+
+
+						<ul data-role="button" data-inset="true" class= "ui-btn-right">
+						<a href="#page2"><input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default" value="로그인">
+						</a>
+						<a href="#page1"><input type="submit" name="wp-submit" id="wp-submit" class="UI-BTN-RIGHT" value="처음 페이지로">
+						</a>
+
+						</ul>
+					</div>
+					<div data-role = "content">
+					<li><a href = "#" ><img src = "nike_JO.JPG" width = "110"  heigt = "100">NB X T&T FLIPFLOP / SD5601GIV</a>
+					<a href="#panel7" data-role="button" data-inline="true">자세히 보기</a>
+
+			</li>
+					<li><a href = "#" ><img src = "UNI.JPG" width = "110"  heigt = "100">UNI NB x 전황일 포켓 보이 반팔티</a>
+					<a href="#panel8" data-role="button" data-inline="true">자세히 보기</a>
+
+			</li>
+			<li><a href = "#" ><img src = "BANANANA.JPG" width = "110"  heigt = "100">SD1101JHW [NB x 전황일]</a>
+			<a href="#panel9" data-role="button" data-inline="true">자세히 보기</a>
+
+			</li>
+				</div>
+
+
+
+
+
+
+
+
+
+					<div data-role="panel" id="panel7" data-display="overlay" data-position = "left" >
+						<img src = "nb.JPG" width = "100"  heigt = "600" align="DEFAULT">
+			<P>	44,000원</P>
+
+<P>-Shock absorption : 일반 신발보다 발에 미치는 압력을 24~50% 효과적으로 분산하여 충격을 흡수합니다</P>
+
+<P>-Non-irritating Material : 무자극 물질로 제2의 피부처럼 피부가 소재에 닿았을 때 느껴지는 촉감이 자극이 없고 편안합니다</P>
+
+<P>-Ultra-lightness : 기존 플라스틱 슈즈 (PVC, RUBBER)와 비교할 수 없을 만큼 가볍습니다</P>
+<P>-Anti-bacterial : 항균 및 제균력 99.9%의 Gem Fighter첨가로 지속적이고 효과적으로 건강을 지켜줍니다</P>
+
+<P>-Recovery cushions : 발에 미치는 충격으로부터 피로를 회복하는 쿠션감을 가지고 있습니다</P>
+
+
+
+				<a href="#page1"><input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default" value="돌아가기">
+
+				</a>
+					</div>
+
+						<div data-role="panel" id="panel8" data-display="overlay" data-position = "left">
+							<img src = "UNI.JPG" width = "100"  heigt = "600" align="DEFAULT">
+							<P>	49,000원</P>
+							<P>라이프스타일, 서브컬쳐를 주제로 그림을 그리는 일러스트레이터 전황일 작가와의 콜라보레이션 포켓 티셔츠입니다</P>
+
+						<P>	캠핑을 주제로 풀어낸 전황일 작가만의 위트있는 보이 그래픽이 포인트입니다</P>
+
+							<P>면 40수 상품으로 SOFTCOOL 원사 사용하여 십자모양의 원사 단면이 흡습/속건 기능을 극대화 시켜 한여름 체온조절을 돕습니다 </P>
+
+
+
+				</DIV>
+						<div data-role="panel" id="panel9" data-display="overlay" data-position = "left">
+				<img src = "BANANANA.JPG" width = "100"  heigt = "600" align="DEFAULT">
+			</a></li><li class="menu__item "><a href="HTTPS://WWW.NAVER.COM" class= target=_blank>
+커뮤니티
+			</a></li></ul>
+				<P>39,000원</P>
+			<P>	라이프스타일, 서브컬쳐를 주제로 드로잉을 하는 일러스트레이터 전황일 작가와의 콜라보레이션 슬라이드입니다</P>
+
+<P>	캠핑을 주제로 풀어낸 전황일 작가만의 위트있는 그래픽을 자수로 표현하여 고급스러움을 더했습니다</P>
+
+<P>또한 PU솔의 기능성이 업그레이드 되어 우수한 탄성과 함께 편안한 착화감을 제공합니다</P>
+
+
+
+
+				<a href="#page1"><input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default" value="돌아가기">
+
+				</a>
+				</div>
+				</DIV>
+</body>
+
+
+
+</html>
